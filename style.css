@@ -1,0 +1,260 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&display=swap');
+
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #F8FAFC;
+  color: #0F172A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar Styling ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* ── Sidebar ── */
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  margin-bottom: 8px;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #2563EB, #1d4ed8);
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+}
+
+.logo-text {
+  font-weight: 800 !important;
+  font-size: 18px !important;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #2563EB, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  margin-top: auto;
+}
+
+/* ── Nav Items ── */
+.nav-item {
+  transition: all 0.15s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: rgba(37, 99, 235, 0.08);
+  transition: width 0.2s ease;
+}
+
+.nav-item:hover::before {
+  width: 100%;
+}
+
+/* ── Summary Cards ── */
+.summary-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.summary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ── Card Entrance Animation ── */
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.MuiCard-root {
+  animation: cardFadeIn 0.3s ease forwards;
+}
+
+/* ── Table Row Hover ── */
+.MuiTableRow-root:hover .MuiTableCell-root {
+  background-color: rgba(37, 99, 235, 0.03);
+  transition: background-color 0.15s ease;
+}
+
+/* ── Chip Styles ── */
+.MuiChip-root {
+  font-weight: 600 !important;
+}
+
+/* ── Dialog ── */
+.MuiDialog-paper {
+  animation: dialogSlideIn 0.2s ease !important;
+}
+
+@keyframes dialogSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ── AppBar Shadow ── */
+.MuiAppBar-root {
+  backdrop-filter: blur(8px) !important;
+}
+
+/* ── Linear Progress ── */
+.MuiLinearProgress-root {
+  transition: all 0.3s ease;
+}
+
+/* ── Button Ripple Enhancement ── */
+.MuiButton-containedPrimary {
+  background: linear-gradient(135deg, #2563EB, #1d4ed8) !important;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3) !important;
+}
+
+.MuiButton-containedPrimary:hover {
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4) !important;
+  transform: translateY(-1px);
+}
+
+/* ── Recharts Tooltip ── */
+.recharts-tooltip-wrapper {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+/* ── Select Dropdown ── */
+.MuiSelect-select {
+  font-weight: 500 !important;
+}
+
+/* ── Table Head ── */
+.MuiTableHead-root .MuiTableCell-root {
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #64748B !important;
+}
+
+/* ── Pagination ── */
+.MuiTablePagination-root {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* ── Icon Buttons ── */
+.MuiIconButton-root {
+  transition: all 0.15s ease !important;
+}
+
+.MuiIconButton-root:hover {
+  transform: scale(1.08);
+}
+
+/* ── Responsive: Mobile ── */
+@media (max-width: 600px) {
+  .sidebar-logo {
+    padding: 16px;
+  }
+
+  .logo-text {
+    font-size: 16px !important;
+  }
+
+  .MuiTableCell-root {
+    padding: 8px 10px !important;
+    font-size: 13px !important;
+  }
+
+  .MuiCard-root .MuiCardContent-root {
+    padding: 16px !important;
+  }
+}
+
+/* ── Dark Mode Overrides ── */
+[data-theme="dark"] body {
+  background-color: #0F172A;
+}
+
+/* ── Print Styles ── */
+@media print {
+  .MuiDrawer-root,
+  .MuiAppBar-root {
+    display: none !important;
+  }
+}
+
+/* ── Focus visible ── */
+:focus-visible {
+  outline: 2px solid #2563EB;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Selection Color ── */
+::selection {
+  background: rgba(37, 99, 235, 0.15);
+  color: #0F172A;
+}
