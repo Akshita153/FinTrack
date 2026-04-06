@@ -1,2 +1,2 @@
 # FinTrack
-A responsive finance dashboard built with React, Material UI &amp; Recharts — featuring role-based UI, transaction management, spending insights, dark mode, and local storage persistence.
+FinTrack is a frontend finance dashboard built as part of a UI evaluation assignment. It lets users track income, expenses, and spending patterns through an intuitive interface. Features include summary cards, interactive charts, a filterable transaction table with CSV export, smart auto-generated insights, and a role-based UI that switches between Admin (full CRUD) and Viewer (read-only) modes. Built with React 18, Material UI v5, and Recharts, with dark mode and localStorage persistence baked in.
